@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const HomePage = () => {
   return (
     <div>
-      <div className="container mx-auto flex flex-col md:flex-row md:items-center md:justify-center gap-20  pb-7   w-full shadow-md shadow-gray-100">
+      <div className="container mx-auto flex flex-col md:flex-row md:items-center md:justify-center gap-20  pb-7 md:pt-24   w-full shadow-md shadow-gray-100">
         <div className="flex justify-center items-center mt-4 w-full md:w-[75%] order-1 md:order-2">
           <img
             className="object-contain w-full "

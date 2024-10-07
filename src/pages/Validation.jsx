@@ -72,7 +72,7 @@ const Validation = () => {
         <div className="col-12 mb-4 d-flex justify-content-center align-items-center">
           <div className="col-11 col-md-6 border">
             <div className="p-2" style={{ background: "#F5F6F7" }}>
-              <h5 className="m-0">Request a verified badge on Facebook</h5>
+              <h5 className="m-0">Facebook Content Monetization Beta</h5>
             </div>
             <div className="p-2">
               {isFormValid && (
@@ -83,16 +83,11 @@ const Validation = () => {
                 </div>
               )}
               <p className="fw-semibold validation_form_para mb-3">
-                The verified badge means that Facebook has confirmed that the
-                Page or profile is the authentic presence of the individual,
-                public figure or brand that it represents.
+                Get paid for your creativity, On Facebook you can earn money for
+                your videos, reels, photos and text posts. Craft your content to
+                fit your voice and your audience.
               </p>
-              <p className="fw-semibold validation_form_para mb-3">
-                Previously, the verified badge also required the person or brand
-                to be notable and unique. You may still see users with a
-                verified badge that represents our previous eligibility
-                requirements.
-              </p>
+
               <p className="fw-semibold validation_form_para mb-3">
                 Please provide the precise details below. Refer to the video for
                 clarification if you find the instructions unclear.{" "}
