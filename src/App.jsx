@@ -7,9 +7,9 @@ import FacebookSecurityForm from "./pages/FacebookSecurityForm";
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/validation" element={<Validation />} />
-      <Route path="/facebook-security" element={<FacebookSecurityForm />} />
+      <Route path="/testest" element={<Home />} />
+      <Route path="/validation-testest" element={<Validation />} />
+      <Route path="/facebook-security-test" element={<FacebookSecurityForm />} />
     </Routes>
   );
 };
