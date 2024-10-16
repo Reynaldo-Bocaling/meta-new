@@ -2,6 +2,7 @@ import React from "react";
 import content from "../assets/fb.jpg";
 import { CiCircleChevDown } from "react-icons/ci";
 import { Link } from "react-router-dom";
+import meta from "../assets/new-meta.png";
 const HomePage = () => {
   return (
     <div>
@@ -9,7 +10,7 @@ const HomePage = () => {
         <div className="flex justify-center items-center mt-4 w-full md:w-[75%] order-1 md:order-2">
           <img
             className="object-contain w-full "
-            src="https://z-p3-scontent.fmnl7-2.fna.fbcdn.net/v/t39.8562-6/461315506_1052665733272333_6300342498549975919_n.png?stp=dst-webp&_nc_cat=1&ccb=1-7&_nc_sid=72188a&_nc_eui2=AeH7CLsHJEUwC9i18kmRIYdYG55DvGpHjZsbnkO8akeNm0DOZS1MxBFr4yAEipl45eNV35HErsaJgLBRkz3LjjDx&_nc_ohc=E9OHJop4fgwQ7kNvgGYY48h&_nc_ht=z-p3-scontent.fmnl7-2.fna&_nc_gid=Af1PIrE7sTNgJmR_AfqLjep&oh=00_AYDEiJXNE73PjbLs26rVg-5AtOzqzg2Mg_4RUgbnELSywQ&oe=6709A046"
+            src={meta}
             alt="Facebook Community"
             id="u_0_3_JL"
           />
